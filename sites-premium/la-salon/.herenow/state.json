@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "walnut-sandal-kfq4": {
+      "siteUrl": "https://walnut-sandal-kfq4.here.now/",
+      "claimToken": "f046220059c2d53ac6d22cd095d8d00d21f9f5c519e05e21f2711e78f410b576",
+      "claimUrl": "https://here.now/claim?slug=walnut-sandal-kfq4&token=f046220059c2d53ac6d22cd095d8d00d21f9f5c519e05e21f2711e78f410b576",
+      "expiresAt": "2026-03-14T13:22:00.947Z"
+    }
+  }
+}

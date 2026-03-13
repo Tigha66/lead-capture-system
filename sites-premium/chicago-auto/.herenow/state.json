@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "centered-spirit-fkyg": {
+      "siteUrl": "https://centered-spirit-fkyg.here.now/",
+      "claimToken": "c883cfe458c2f8fb715829d6692352bdfc967fddc8843c04a739c1dd6ad92521",
+      "claimUrl": "https://here.now/claim?slug=centered-spirit-fkyg&token=c883cfe458c2f8fb715829d6692352bdfc967fddc8843c04a739c1dd6ad92521",
+      "expiresAt": "2026-03-14T13:22:26.085Z"
+    }
+  }
+}

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[BUSINESS_NAME] | Premium Website Demo</title>
+    <meta name="description" content="[BUSINESS_DESCRIPTION]">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CHAT WIDGET: Tawk.to (Free Live Chat) -->
+    <!-- Replace [TAWK_TO_PROPERTY_ID] with your actual ID from tawk.to -->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/[TAWK_TO_PROPERTY_ID]/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!-- END Tawk.to -->
+    
+    <!-- CHAT WIDGET: Crisp (Alternative - Uncomment to use) -->
+    <!-- Replace [CRISP_WEBSITE_ID] with your actual ID from crisp.chat -->
+    <!--
+    <script>
+      window.$crisp=[];window.CRISP_WEBSITE_ID="[CRISP_WEBSITE_ID]";
+      (function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";
+      s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+    </script>
+    -->
+    <!-- END Crisp -->
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --secondary: #06b6d4;
+            --accent: #f59e0b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-2xl: 2rem;
+            --radius-full: 9999px;
+            --transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+        
+        /* Navigation */
+        .navbar { background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); padding: 1.25rem 0; box-shadow: var(--shadow-lg); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 1rem; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.75rem; font-weight: 900; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .logo-icon { font-size: 2.5rem; }
+        
+        /* Hero */
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; background: var(--gradient-primary); color: white; }
+        .hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; margin-bottom: 1.5rem; }
+        .hero p { font-size: clamp(1.1rem, 2vw, 1.4rem); margin-bottom: 2.5rem; opacity: 0.95; }
+        .btn { display: inline-flex; align-items: center; gap: 0.75rem; padding: 1.25rem 3rem; border-radius: var(--radius-full); font-weight: 700; text-decoration: none; transition: var(--transition); border: none; cursor: pointer; }
+        .btn-white { background: white; color: var(--primary); box-shadow: var(--shadow-lg); }
+        .btn-white:hover { transform: translateY(-4px); box-shadow: var(--shadow-2xl), var(--shadow-glow); }
+        
+        /* Contact Section */
+        .contact { padding: 8rem 0; background: white; }
+        .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900; text-align: center; margin-bottom: 1rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-subtitle { text-align: center; color: var(--gray); font-size: 1.25rem; margin-bottom: 4rem; }
+        
+        /* Lead Capture Form */
+        .contact-form { max-width: 600px; margin: 0 auto; background: var(--light); padding: 3rem; border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 1rem; border: 2px solid var(--gray-light); border-radius: var(--radius-lg); font-size: 1rem; font-family: inherit; transition: var(--transition); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1); }
+        .btn-submit { width: 100%; background: var(--gradient-primary); color: white; box-shadow: var(--shadow-lg); }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-xl), var(--shadow-glow); }
+        
+        /* Success Message */
+        .success-message { display: none; text-align: center; padding: 3rem; background: var(--success); color: white; border-radius: var(--radius-2xl); margin-top: 2rem; animation: fadeInUp 0.6s ease-out; }
+        .success-message.show { display: block; }
+        .success-message i { font-size: 4rem; margin-bottom: 1rem; }
+        .success-message h3 { font-size: 2rem; margin-bottom: 0.5rem; }
+        
+        /* Copy Button */
+        .copy-details { margin-top: 2rem; padding: 2rem; background: var(--light); border-radius: var(--radius-xl); }
+        .copy-btn { background: var(--gradient-secondary); color: white; padding: 1rem 2rem; border-radius: var(--radius-full); border: none; font-weight: 700; cursor: pointer; transition: var(--transition); }
+        .copy-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .copy-feedback { margin-top: 1rem; color: var(--success); font-weight: 600; display: none; }
+        
+        /* Demo Mode Badge */
+        .demo-badge { position: fixed; bottom: 20px; left: 20px; background: var(--danger); color: white; padding: 1rem 1.5rem; border-radius: var(--radius-full); font-weight: 700; box-shadow: var(--shadow-lg); z-index: 9999; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Footer */
+        footer { background: var(--dark); color: white; padding: 3rem 0; text-align: center; }
+        
+        /* Responsive */
+        @media (max-width: 768px) { .contact-form { padding: 2rem 1.5rem; } .hero h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">[BUSINESS_ICON]</span>
+                <span class="logo-text">[BUSINESS_NAME]</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>[BUSINESS_TAGLINE]</h1>
+            <p>[BUSINESS_DESCRIPTION]</p>
+            <a href="#contact" class="btn btn-white">
+                <i class="fas fa-calendar-check"></i> Get Free Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact/Lead Capture Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+            
+            <form class="contact-form" id="leadForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Needed *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service...</option>
+                        <option value="service-1">[SERVICE_1]</option>
+                        <option value="service-2">[SERVICE_2]</option>
+                        <option value="service-3">[SERVICE_3]</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+            
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+                <p>We'll reach out shortly to discuss your project.</p>
+            </div>
+            
+            <!-- Copy Details Button (Demo Mode) -->
+            <div class="copy-details" id="copyDetails">
+                <h4 style="margin-bottom: 1rem;">📋 Demo Mode - Copy Lead Details</h4>
+                <p style="color: var(--gray); margin-bottom: 1rem;">Click to copy lead information to clipboard for testing</p>
+                <button class="copy-btn" onclick="copyLeadDetails()">
+                    <i class="fas fa-copy"></i> Copy Details
+                </button>
+                <div class="copy-feedback" id="copyFeedback">
+                    <i class="fas fa-check"></i> Copied to clipboard!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Mode Badge -->
+    <div class="demo-badge">
+        <i class="fas fa-info-circle"></i> DEMO MODE
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 [BUSINESS_NAME]. All rights reserved.</p>
+            <p style="color: var(--gray-light); margin-top: 0.5rem;">[BUSINESS_ADDRESS] | [BUSINESS_PHONE]</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Lead Capture with localStorage
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const leadData = {
+                id: Date.now(),
+                timestamp: new Date().toISOString(),
+                business: '[BUSINESS_NAME]',
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+                status: 'new'
+            };
+            
+            // Save to localStorage
+            const leads = JSON.parse(localStorage.getItem('leads') || '[]');
+            leads.push(leadData);
+            localStorage.setItem('leads', JSON.stringify(leads));
+            
+            // Show success message
+            document.getElementById('leadForm').style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+            
+            // Send to email service (if configured)
+            sendToEmail(leadData);
+            
+            // Send SMS to owner (if configured)
+            sendSMSToOwner(leadData);
+            
+            // Log to console for demo
+            console.log('Lead captured:', leadData);
+            console.log('Total leads in storage:', leads.length);
+        });
+        
+        // Email handoff function
+        function sendToEmail(leadData) {
+            // OPTION 1: Formspree (Free - https://formspree.io)
+            // Replace [FORMSPREE_ID] with your Formspree form ID
+            /*
+            fetch('https://formspree.io/f/[FORMSPREE_ID]', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(leadData)
+            }).then(response => {
+                if (response.ok) console.log('Email sent successfully');
+            });
+            */
+            
+            // OPTION 2: EmailJS (Free tier - https://emailjs.com)
+            // Replace [EMAILJS_SERVICE_ID], [EMAILJS_TEMPLATE_ID], [EMAILJS_PUBLIC_KEY]
+            /*
+            emailjs.init("[EMAILJS_PUBLIC_KEY]");
+            emailjs.send('[EMAILJS_SERVICE_ID]', '[EMAILJS_TEMPLATE_ID]', leadData)
+                .then(() => console.log('Email sent successfully'));
+            */
+            
+            // OPTION 3: Mailto fallback (no setup required)
+            const mailtoLink = `mailto:[OWNER_EMAIL]?subject=New Lead: ${leadData.name}&body=Name: ${leadData.name}%0AEmail: ${leadData.email}%0APhone: ${leadData.phone}%0AService: ${leadData.service}%0AMessage: ${leadData.message}`;
+            window.open(mailtoLink, '_blank');
+        }
+        
+        // SMS handoff function
+        function sendSMSToOwner(leadData) {
+            // OPTION 1: Twilio (https://twilio.com)
+            // Replace [TWILIO_ACCOUNT_SID], [TWILIO_AUTH_TOKEN], [TWILIO_PHONE], [OWNER_PHONE]
+            /*
+            fetch('/api/send-sms', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    accountSid: '[TWILIO_ACCOUNT_SID]',
+                    authToken: '[TWILIO_AUTH_TOKEN]',
+                    from: '[TWILIO_PHONE]',
+                    to: '[OWNER_PHONE]',
+                    body: `New lead: ${leadData.name} (${leadData.phone}) - ${leadData.service}`
+                })
+            });
+            */
+            
+            // OPTION 2: SMS fallback (opens phone's SMS app)
+            const smsLink = `sms:[OWNER_PHONE]?body=New lead: ${leadData.name} (${leadData.email}) - ${leadData.service}`;
+            window.open(smsLink, '_blank');
+        }
+        
+        // Copy lead details function
+        function copyLeadDetails() {
+            const leads = JSON.parse(localStorage.getItem('leads') || '[]');
+            const latestLead = leads[leads.length - 1];
+            
+            if (!latestLead) {
+                alert('No leads captured yet. Submit the form first!');
+                return;
+            }
+            
+            const leadText = `
+NEW LEAD - ${latestLead.business}
+━━━━━━━━━━━━━━━━━━━━
+Name: ${latestLead.name}
+Email: ${latestLead.email}
+Phone: ${latestLead.phone}
+Service: ${latestLead.service}
+Message: ${latestLead.message}
+Time: ${new Date(latestLead.timestamp).toLocaleString()}
+━━━━━━━━━━━━━━━━━━━━
+            `.trim();
+            
+            navigator.clipboard.writeText(leadText).then(() => {
+                document.getElementById('copyFeedback').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('copyFeedback').style.display = 'none';
+                }, 3000);
+            });
+        }
+        
+        // View all leads (for demo)
+        function viewAllLeads() {
+            const leads = JSON.parse(localStorage.getItem('leads') || '[]');
+            console.log('All captured leads:', leads);
+            alert(`Total leads captured: ${leads.length}\nCheck console for details`);
+        }
+    </script>
+    
+    <!-- INTERCOM (For larger clients - Optional) -->
+    <!-- Replace [INTERCOM_APP_ID] with your Intercom app ID -->
+    <!--
+    <script>
+      window.intercomSettings = { app_id: "[INTERCOM_APP_ID]" };
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/[INTERCOM_APP_ID]';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+    -->
+    <!-- END Intercom -->
+</body>
+</html>

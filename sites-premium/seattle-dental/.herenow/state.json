@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "subtle-eagle-6h8n": {
+      "siteUrl": "https://subtle-eagle-6h8n.here.now/",
+      "claimToken": "4fcb5d1b0986b15220b51981268f7b80f6102e1283c9155ec27a9025404cc503",
+      "claimUrl": "https://here.now/claim?slug=subtle-eagle-6h8n&token=4fcb5d1b0986b15220b51981268f7b80f6102e1283c9155ec27a9025404cc503",
+      "expiresAt": "2026-03-14T13:21:50.191Z"
+    }
+  }
+}

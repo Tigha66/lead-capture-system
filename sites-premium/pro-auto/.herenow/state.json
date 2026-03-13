@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "shiny-rafter-wk9d": {
+      "siteUrl": "https://shiny-rafter-wk9d.here.now/",
+      "claimToken": "7e5951f4cc915a70fa381896b1f693e83247fc7851ea67719e76a01338d6ba0a",
+      "claimUrl": "https://here.now/claim?slug=shiny-rafter-wk9d&token=7e5951f4cc915a70fa381896b1f693e83247fc7851ea67719e76a01338d6ba0a",
+      "expiresAt": "2026-03-14T13:22:14.602Z"
+    }
+  }
+}
